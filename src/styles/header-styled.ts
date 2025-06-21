@@ -7,7 +7,7 @@ export const HeaderWrapper = styled.header`
     width: 60%;
     margin: auto;
     background-color: var(--teriary);
-    background-image: url("./images/anna-margishvili.jpg");
+    background-image: url("/assets/images/anna-margishvili.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: -550px;
