@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Passions';
-    src: url('/src/assets//fonts/PassionsConflict-Regular.woff2') format('woff2'),
-        url('/src/assets/fonts/PassionsConflict-Regular.woff') format('woff');
+    src: url('/fonts/PassionsConflict-Regular.woff2') format('woff2'),
+        url('/fonts/PassionsConflict-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'Numans';
-    src: url('/src/assets/fonts/Numans-Regular.woff2') format('woff2'),
-        url('/src/assets/fonts/Numans-Regular.woff') format('woff');
+    src: url('/fonts/Numans-Regular.woff2') format('woff2'),
+        url('/fonts/Numans-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
