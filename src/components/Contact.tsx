@@ -15,7 +15,7 @@ const hours: string[] = [
 ];
 const today = new Date()
 
-const punctuationNumbersArray = ["0","1","2","3","4","5","6","7","8","9","!","@","#","$","%","^","&","*","(",")","-","_","=","+","[","]","{","}","\\","|",";",":","'",'"',",","<",".",">","/","?","`","~"]
+// const punctuationNumbersArray = ["0","1","2","3","4","5","6","7","8","9","!","@","#","$","%","^","&","*","(",")","-","_","=","+","[","]","{","}","\\","|",";",":","'",'"',",","<",".",">","/","?","`","~"]
 
 export type patientData = {
   patient_name: string;
@@ -62,7 +62,7 @@ function Contact() {
       return;
     }
 
-    const { data, error } = await supabase.from("Clinic_patient_visit_data").insert([{
+    const { error } = await supabase.from("Clinic_patient_visit_data").insert([{
           patient_name: patientData.patient_name,
           patient_email: patientData.patient_email,
           patient_problem: patientData.patient_problem,

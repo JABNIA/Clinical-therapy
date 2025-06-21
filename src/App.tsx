@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router'
+import { BrowserRouter, Route, Routes } from 'react-router'
 import Layout from './components/Layout'
 import About from './components/About'
 import Therapy from './components/Therapy'

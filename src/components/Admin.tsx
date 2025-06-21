@@ -19,50 +19,7 @@ type patientData = {
 function Admin() {
   const [error, setError] = useState<boolean | null>(null) 
   const [patients, setPatients] = useState<null | patientData[]>(null)
-
-  const handleVisitPassed = async (id: number) => {
-    const selectedVisit = await supabase.from("Clinic_patient_visit_data").select().eq("id", id)
-    if (selectedVisit.data === null) return;
-    const visitObj = selectedVisit.data[0]
-    console.log(visitObj)
-    await supabase.from("Visited").insert([{
-      id: visitObj.id,
-      created_at: visitObj.created_at,
-      patient_name: visitObj.patient_name,
-      patient_email: visitObj.patient_email,
-      patient_problem: visitObj.patient_problem,
-      telephone_number: visitObj.telephone_number,
-      visit_date: visitObj.visit_date,
-      visit_hour: visitObj.visit_time,
-    }])
-    await supabase.from("Clinic_patient_visit_data").delete().eq("id", id );
-    const {data, error} = await supabase.from("Clinic_patient_visit_data").select("*")
-
-    setPatients(data)
-  }
-
-  const handleTerminateVisit = async (id: number) => {
-    const selectedVisit = await supabase.from("Clinic_patient_visit_data").select().eq("id", id);
-    if (selectedVisit.data === null) return;
-    const visitObj = selectedVisit.data[0]
-    console.log(visitObj)
-    await supabase.from("terminated").insert([{
-      id: visitObj.id,
-      created_at: visitObj.created_at,
-      patient_name: visitObj.patient_name,
-      patient_email: visitObj.patient_email,
-      patient_problem: visitObj.patient_problem,
-      telephone_number: visitObj.telephone_number,
-      visit_date: visitObj.visit_date,
-      visit_hour: visitObj.visit_time,
-    }])
-    await supabase.from("Clinic_patient_visit_data").delete().eq("id", id );
-    const {data, error} = await supabase.from("Clinic_patient_visit_data").select("*")
-
-    setPatients(data)
-
-  }
-
+  console.log(error);
   useEffect(() => {
     const fetchPatientData = async () => {
       const {data, error} = await supabase.from("Clinic_patient_visit_data").select("*")
@@ -115,7 +72,7 @@ function IncomingVisits() {
       visit_hour: visitObj.visit_hour,
     }])
     await supabase.from("Clinic_patient_visit_data").delete().eq("id", id );
-    const {data, error} = await supabase.from("Clinic_patient_visit_data").select("*")
+    const {data} = await supabase.from("Clinic_patient_visit_data").select("*")
 
     setPatients(data)
   }
@@ -136,7 +93,7 @@ function IncomingVisits() {
       visit_hour: visitObj.visit_time,
     }])
     await supabase.from("Clinic_patient_visit_data").delete().eq("id", id );
-    const {data, error} = await supabase.from("Clinic_patient_visit_data").select("*")
+    const {data} = await supabase.from("Clinic_patient_visit_data").select("*")
 
     setPatients(data)
 

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 import { NavWrapper } from "../styles/nav-styled"
-import { useLocation, useParams } from "react-router";
+import { useLocation } from "react-router";
 
 function Nav() {
     const page = useLocation();
