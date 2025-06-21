@@ -39,7 +39,7 @@ function Home() {
          You don’t have to face challenges alone. Let’s work together to create a brighter path forward.
         </p>
       </div>
-        <img src="./images/session.jpeg" alt="session" className="sessionImg"/>
+        <img src="/images/session.jpeg" alt="session" className="sessionImg"/>
       </div>
       </div>
       <div className="services info">
