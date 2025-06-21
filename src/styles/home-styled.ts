@@ -22,7 +22,7 @@ export const HomeWrapper = styled.section`
 
     .chairBg {
         height: 480px;
-        background-image: url('/images/chair.jpeg');
+        background-image: url('/assets/images/chair.jpeg');
     }
 
     .contentWrapper{
