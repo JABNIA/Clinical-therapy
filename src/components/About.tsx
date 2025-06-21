@@ -7,7 +7,7 @@ function About() {
 
       <div className="about-content">
         <img
-          src="./src/assets/images/margo.jpg"
+          src="./images/margo.jpg"
           alt="Dr. Anna Smith"
          className="about-img"
         />

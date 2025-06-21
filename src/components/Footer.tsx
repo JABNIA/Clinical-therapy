@@ -18,17 +18,17 @@ function Footer() {
         <div className="socials">
         <div className="social-icons">
           <a href="https://www.facebook.com/amrgshv" target="_blank" rel="noopener noreferrer">
-            <img src="./src/assets/icons/facebook.png" alt="facebook" className="icon"/>
+            <img src="./icons/facebook.png" alt="facebook" className="icon"/>
           </a>
         </div>
         <div className="social-icons">
           <a href="https://www.instagram.com/amrgshv/" target="_blank" rel="noopener noreferrer">
-            <img src="./src/assets/icons/instagram.png" alt="instagram" className="icon"/>
+            <img src="./icons/instagram.png" alt="instagram" className="icon"/>
           </a>
         </div>
         <div className="social-icons">
           <a href="" target="_blank" rel="noopener noreferrer">
-            <img src="./src/assets/icons/twitter.png" alt="twitter" className="icon"/>
+            <img src="./icons/twitter.png" alt="twitter" className="icon"/>
           </a>
         </div>
         </div>
