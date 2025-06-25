@@ -115,6 +115,7 @@ function IncomingVisits() {
     fetchPatientData()
   }, [])
   return (
+    <div className="table-container">
      <table>
         <thead>
           <tr>
@@ -147,6 +148,7 @@ function IncomingVisits() {
           )}
         </tbody>
       </table>
+    </div>
   )
 }
 
@@ -171,34 +173,36 @@ function PassedVisits() {
     fetchPatientData()
   }, [])
   return (
+    <div  className="table-container">
      <table className="visited">
         <thead>
           <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Problem</th>
-            <th>Mobile Phone</th>
-            <th>Visit date</th>
-            <th>Visit Hour</th>
+            <th className="visited-th">Id</th>
+            <th className="visited-th">Name</th>
+            <th className="visited-th">Email</th>
+            <th className="visited-th">Problem</th>
+            <th className="visited-th">Mobile Phone</th>
+            <th className="visited-th">Visit date</th>
+            <th className="visited-th">Visit Hour</th>
           </tr>
         </thead>
         <tbody>
           {patients?.map(patient => { 
-          return (
-            <tr key={patient.id}>
-              <td className="table-data">{patient.id}</td>
-              <td className="table-data">{patient.patient_name}</td>
-              <td className="table-data">{patient.patient_email}</td>
-              <td className="table-data">{patient.patient_problem}</td>
-              <td className="table-data">{patient.telephone_number}</td>
-              <td className="table-data">{patient.visit_date}</td>
-              <td className="table-data">{patient.visit_hour}</td>
+            return (
+              <tr key={patient.id}>
+              <td className="visited-td">{patient.id}</td>
+              <td className="visited-td">{patient.patient_name}</td>
+              <td className="visited-td">{patient.patient_email}</td>
+              <td className="visited-td">{patient.patient_problem}</td>
+              <td className="visited-td">{patient.telephone_number}</td>
+              <td className="visited-td">{patient.visit_date.substring(0, 10)}</td>
+              <td className="visited-td">{patient.visit_hour}</td>
             </tr>
             )}
           )}
         </tbody>
       </table>
+    </div>
   )
 }
 
@@ -224,33 +228,35 @@ function TerminatedVisits() {
     fetchPatientData()
   }, [])
   return (
+    <div  className="table-container">
      <table className="terminated">
         <thead>
           <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Problem</th>
-            <th>Mobile Phone</th>
-            <th>Visit date</th>
-            <th>Visit Hour</th>
+            <th className="terminated-th">Id</th>
+            <th className="terminated-th">Name</th>
+            <th className="terminated-th">Email</th>
+            <th className="terminated-th">Problem</th>
+            <th className="terminated-th">Mobile Phone</th>
+            <th className="terminated-th">Visit date</th>
+            <th className="terminated-th">Visit Hour</th>
           </tr>
         </thead>
         <tbody>
           {patients?.map(patient => { 
-          return (
-            <tr key={patient.id}>
-              <td className="table-data">{patient.id}</td>
-              <td className="table-data">{patient.patient_name}</td>
-              <td className="table-data">{patient.patient_email}</td>
-              <td className="table-data">{patient.patient_problem}</td>
-              <td className="table-data">{patient.telephone_number}</td>
-              <td className="table-data">{patient.visit_date}</td>
-              <td className="table-data">{patient.visit_hour}</td>
+            return (
+              <tr key={patient.id}>
+              <td className="terminated-td">{patient.id}</td>
+              <td className="terminated-td">{patient.patient_name}</td>
+              <td className="terminated-td">{patient.patient_email}</td>
+              <td className="terminated-td">{patient.patient_problem}</td>
+              <td className="terminated-td">{patient.telephone_number}</td>
+              <td className="terminated-td">{patient.visit_date.substring(0, 10)}</td>
+              <td className="terminated-td">{patient.visit_hour}</td>
             </tr>
             )}
           )}
         </tbody>
       </table>
+    </div>
   )
 }
